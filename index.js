@@ -35,6 +35,9 @@ ctx.strokeStyle = `hsl(${hue},100%,50%)`
 
 canvas.addEventListener('mousemove',Draw)
 canvas.addEventListener('mouseup', () => isDrawing=false)
+addEventListener('touchmove', (e) => {lastX = e.offsetX
+    lastY = e.offsetY
+    isDrawing=true})
 canvas.addEventListener('mousedown', (e) => {
     lastX = e.offsetX
     lastY = e.offsetY
